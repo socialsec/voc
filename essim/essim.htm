@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-GB" lang="en-GB" xml:lang="en-GB" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   
+<META charset="utf-8">   
+<META name="viewport" content="width=device-width">   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]--> 
+  
+<META name="viewport" content="width=device-width">   <TITLE>ESSIM Vocabulary</TITLE>   <LINK href="essim.ttl" rel="alternate" type="text/turtle"> 
+  <LINK href="http://www.w3.org/StyleSheets/TR/base.css" rel="stylesheet" type="text/css"> 
+  
+<STYLE type="text/css">
+  footer p {text-align:right; font-style:italic}
+  table {border-collapse:collapse; caption-side:bottom}
+  td, th {border:1px solid black; padding:0.2em}
+  table caption {font-style:italic; padding:0.3em 0}
+  section#namespaces td {font-family:monospace}
+  table.definition {margin-top:1em; width:100%}
+  table.definition td.prop {width:10em}
+  </STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY><HEADER>
+<H1>ESSIM Vocabulary</H1>
+<P>This document is also available as an <A href="essim.ttl">RDF 
+schema</A> </P></HEADER><SECTION id="abstract">
+<H2>Abstract</H2>
+<P>The ESSIM Vocabulary provides a minimum set of classes and properties 
+for describing.</P></SECTION><SECTION id="status">
+<H2>Status</H2>
+<P>The ESSIM Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://joinup.ec.europa.eu/asset/core_person/asset_release/core-person-vocabulary-100"></A>. 
+<P>Copyright © 2018 UAH, ISSA</P>
+<P>The vocabulary is published under the Open Metadata Licence.</P></SECTION>
+<HR>
+<SECTION id="namespaces">
+<H2>Namespaces used</H2>
+<TABLE>
+  <CAPTION>Namespaces used in this schema</CAPTION>
+  <TBODY>
+  <TR>
+    <TH>prefix</TH>
+    <TH>namespace</TH></TR>
+  <TBODY>
+      <TR>
+          <TD>cvmap</TD>
+          <TD>http://data.europa.eu/core-vocabularies/</TD></TR>  
+    <TR>
+      <TD>dc</TD>
+      <TD>http://purl.org/dc/elements/1.1/</TD></TR>
+    <TR>
+    <TD>dcterms</TD>
+    <TD>http://purl.org/dc/terms/</TD></TR>
+  <TR>
+    <TD>iso639-1</TD>
+    <TD>http://id.loc.gov/vocabulary/iso639-1</TD></TR>  
+  <TR>
+    <TD>rdf</TD>
+    <TD>http://www.w3.org/1999/02/22-rdf-syntax-ns#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+    <TR>
+        <TD>rdfs</TD>
+        <TD>http://www.w3.org/2000/01/rdf-schema#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+  <TR>
+    <TD>xsd</TD>
+    <TD>http://www.w3.org/2001/XMLSchema#</TD></TR></TBODY></TABLE></SECTION>
+<H2 id="summary">Summary of terms</H2>
+<P>The ESSIM Vocabulary defines one the following terms.</P>
+<TABLE class="definition" id="Field">
+  <TBODY>
+  <TR>
+    <TH>Class</TH>
+    <TH><A href="#Field">essim:Field</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Data field</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Data field in a Social Security form.</TD></TR>
+  </TBODY></TABLE>
+
+<TABLE class="definition" id="Relation">
+  <TBODY>
+    <TR>
+      <TH>Class</TH>
+      <TH><A href="#Relation">essim:Relation</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Relation</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Relation between a data field and a term in the Glossary of Terms.</TD></TR>
+  </TBODY>
+</TABLE>
+  
+<TABLE class="definition" id="Language">
+    <TBODY>
+      <TR>
+        <TH>Class</TH>
+        <TH><A href="#Language">essim:Language</A></TH></TR>
+      <TBODY>
+      <TR>
+        <TD class="prop">label</TD>
+        <TD>Language</TD></TR>
+      <TR>
+        <TD class="prop">comment</TD>
+        <TD>Representation of names of languages.</TD></TR>
+        <TR>
+            <TD class="prop">subClassOf</TD>
+            <TD><A href="http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language">iso639-1:iso639-1_Language</A></TD></TR>
+        </TR>
+        <TR>
+            <TD class="prop">subClassOf</TD>
+            <TD><A href="http://purl.org/dc/terms/ISO639-2">dcterms:ISO639-2</A></TD></TR>
+        </TR>
+        <TR>
+            <TD class="prop">subClassOf</TD>
+            <TD><A href="http://purl.org/dc/terms/ISO639-3">dcterms:ISO639-3</A></TD></TR>
+        </TR>
+     </TBODY>
+  </TABLE>
+
+
+<TABLE class="definition" id="dateCreated">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#dateCreated">essim:dateCreated</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Date Created</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">essim:Field</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+      
+    <TR>
+      <TD class="prop">subPropertyOf</TD>
+        <TD><A 
+            href="http://purl.org/dc/elements/1.1/date">dc:date</A></TD></TR>
+          
+              </TBODY>
+</TABLE>
+
+
+<TABLE class="definition" id="dateModified">
+    <TBODY>
+    <TR>
+      <TH>Datatype property</TH>
+      <TH><A 
+    href="#dateModified">essim:dateModified</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Date Modified</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+        
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/date">dc:date</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+    
+
+<TABLE class="definition" id="creatorInstitution">
+  <TBODY>
+  <TR>
+    <TH>Object property</TH>
+    <TH><A 
+      href="#creatorInstitution">essim:creatorInstitution</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Creator Institution</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>..</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">essim:Field</A></TD></TR>
+  <TR>
+    <TD class="prop">range</TD>
+    <TD><A href="http://github.socialsecu.io/ir#Institution">ir:Institution</A></TD></TR></TBODY></TABLE>
+
+<FOOTER>
+<P>Last updated: $Date: 2018-11-01 15:25:02 $</P>
+<P><A href="http://www.w3.org/People/all#phila">Social Security Vocabularies</A>, <A href="mailto:phila@w3.org">phila@w3.org</A>.</P></FOOTER></BODY></HTML>
