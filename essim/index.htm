@@ -26,9 +26,9 @@ http-equiv="X-UA-Compatible">
 schema</A> </P></HEADER><SECTION id="abstract">
 <H2>Abstract</H2>
 <P>The ESSIM Vocabulary provides a minimum set of classes and properties 
-for describing.</P></SECTION><SECTION id="status">
+for describing data (fileds) in Social Security forms.</P></SECTION><SECTION id="status">
 <H2>Status</H2>
-<P>The ESSIM Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://joinup.ec.europa.eu/asset/core_person/asset_release/core-person-vocabulary-100"></A>. 
+<P>The ESSIM Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://socialsec.github.io/voc/">https://socialsec.github.io/voc/</A>. 
 <P>Copyright © 2018 UAH, ISSA</P>
 <P>The vocabulary is published under the Open Metadata Licence.</P></SECTION>
 <HR>
@@ -61,9 +61,28 @@ for describing.</P></SECTION><SECTION id="status">
         <TD>http://www.w3.org/2000/01/rdf-schema#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
   <TR>
     <TD>xsd</TD>
-    <TD>http://www.w3.org/2001/XMLSchema#</TD></TR></TBODY></TABLE></SECTION>
+    <TD>http://www.w3.org/2001/XMLSchema#</TD></TR>
+    <TR>
+      <TD>essim</TD>
+      <TD>https://socialsec.github.io/voc/essim/#</TD></TR>
+   <TR>
+        <TD>eurlex</TD>
+        <TD>https://socialsec.github.io/voc/eurlex/#</TD></TR>
+    <TR>
+          <TD>got</TD>
+          <TD>https://socialsec.github.io/voc/got/#</TD></TR>
+   <TR>
+            <TD>ir</TD>
+            <TD>https://socialsec.github.io/voc/ir/#</TD></TR>
+   <TR>
+              <TD>od</TD>
+              <TD>https://socialsec.github.io/voc/od/#</TD></TR>
+
+
+  </TBODY></TABLE>
+</SECTION>
 <H2 id="summary">Summary of terms</H2>
-<P>The ESSIM Vocabulary defines one the following terms.</P>
+<P>The ESSIM Vocabulary defines the following terms.</P>
 <TABLE class="definition" id="Field">
   <TBODY>
   <TR>
@@ -93,33 +112,104 @@ for describing.</P></SECTION><SECTION id="status">
   </TBODY>
 </TABLE>
   
-<TABLE class="definition" id="Language">
+<TABLE class="definition" id="creatorInstitution">
+  <TBODY>
+  <TR>
+    <TH>Object property</TH>
+    <TH><A 
+      href="#creatorInstitution">essim:creatorInstitution</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Creator Institution</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Social security institution primarily responsible for making the data.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">essim:Field</A></TD></TR>
+  <TR>
+    <TD class="prop">range</TD>
+    <TD><A href="http://github.socialsecu.io/ir#Institution">ir:Institution</A></TD></TR>
+    <TR>
+      <TD class="prop">obligation</TD>
+      <TD>Mandatory</TD>
+  </TR>
+  <TR>
+    <TD class="prop">multiplicity</TD>
+    <TD>1..1</TD>
+  </TR> 
+  <TR>
+    <TD class="prop">subPropertyOf</TD>
+      <TD><A 
+          href="http://purl.org/dc/elements/1.1/creator">dc:creator</A></TD></TR>
+  </TBODY></TABLE>
+
+  <TABLE class="definition" id="dataSet">
     <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+        href="#dataSet">essim:dataSet</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Data Set</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Core Vocabulary where a similar data concept could be found.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+    <TR>
+      <TD class="prop">range</TD>
+      <TD><A href="http://data.europa.eu/core-vocabularies/Mapping">cvmap:Mapping</A></TD></TR>
       <TR>
-        <TH>Class</TH>
-        <TH><A href="#Language">essim:Language</A></TH></TR>
+        <TD class="prop">obligation</TD>
+        <TD>Optional</TD>
+    </TR>
+    <TR>
+      <TD class="prop">multiplicity</TD>
+      <TD>0..1</TD>
+    </TR> 
+    <TR>
+      <TD class="prop">subPropertyOf</TD>
+        <TD><A 
+            href="http://purl.org/dc/elements/1.1/subject">dc:subject</A></TD></TR>
+    </TBODY></TABLE>
+  
+    <TABLE class="definition" id="dataTerm">
+      <TBODY>
+      <TR>
+        <TH>Object property</TH>
+        <TH><A 
+          href="#dataTerm">essim:dataTerm</A></TH></TR>
       <TBODY>
       <TR>
         <TD class="prop">label</TD>
-        <TD>Language</TD></TR>
+        <TD>Data Term</TD></TR>
       <TR>
         <TD class="prop">comment</TD>
-        <TD>Representation of names of languages.</TD></TR>
+        <TD>Term included in the Glossary of Terms (GOT) that defines the meaning of the data field.</TD></TR>
+      <TR>
+        <TD class="prop">domain</TD>
+        <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+        <TD class="prop">range</TD>
+        <TD><A href="https://socialsec.github.io/voc/got/#Term">got:Term</A></TD></TR>
         <TR>
-            <TD class="prop">subClassOf</TD>
-            <TD><A href="http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language">iso639-1:iso639-1_Language</A></TD></TR>
-        </TR>
-        <TR>
-            <TD class="prop">subClassOf</TD>
-            <TD><A href="http://purl.org/dc/terms/ISO639-2">dcterms:ISO639-2</A></TD></TR>
-        </TR>
-        <TR>
-            <TD class="prop">subClassOf</TD>
-            <TD><A href="http://purl.org/dc/terms/ISO639-3">dcterms:ISO639-3</A></TD></TR>
-        </TR>
-     </TBODY>
-  </TABLE>
-
+          <TD class="prop">obligation</TD>
+          <TD>Mandatory</TD>
+      </TR>
+      <TR>
+        <TD class="prop">multiplicity</TD>
+        <TD>1..1</TD>
+      </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/title">dc:title</A></TD></TR>
+      </TBODY></TABLE>
 
 <TABLE class="definition" id="dateCreated">
   <TBODY>
@@ -133,7 +223,7 @@ for describing.</P></SECTION><SECTION id="status">
     <TD>Date Created</TD></TR>
   <TR>
     <TD class="prop">comment</TD>
-    <TD>.</TD></TR>
+    <TD>A point of time associated with the starting point in the lifecycle of data.</TD></TR>
   <TR>
     <TD class="prop">domain</TD>
     <TD><A href="#Field">essim:Field</A></TD></TR>
@@ -141,13 +231,20 @@ for describing.</P></SECTION><SECTION id="status">
         <TD class="prop">range</TD>
         <TD><A 
         href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
-      
     <TR>
-      <TD class="prop">subPropertyOf</TD>
-        <TD><A 
-            href="http://purl.org/dc/elements/1.1/date">dc:date</A></TD></TR>
+        <TD class="prop">obligation</TD>
+        <TD>Mandatory</TD>
+    </TR>
+    <TR>
+      <TD class="prop">multiplicity</TD>
+      <TD>1..1</TD>
+    </TR>
+  <TR>
+    <TD class="prop">subPropertyOf</TD>
+    <TD><A 
+         href="http://purl.org/dc/elements/1.1/date">dc:date</A></TD></TR>
           
-              </TBODY>
+  </TBODY>
 </TABLE>
 
 
@@ -163,7 +260,7 @@ for describing.</P></SECTION><SECTION id="status">
       <TD>Date Modified</TD></TR>
     <TR>
       <TD class="prop">comment</TD>
-      <TD>.</TD></TR>
+      <TD>Date when data was last modified or changed.</TD></TR>
     <TR>
       <TD class="prop">domain</TD>
       <TD><A href="#Field">essim:Field</A></TD></TR>
@@ -171,7 +268,14 @@ for describing.</P></SECTION><SECTION id="status">
           <TD class="prop">range</TD>
           <TD><A 
           href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
-        
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..1</TD>
+        </TR> 
       <TR>
         <TD class="prop">subPropertyOf</TD>
           <TD><A 
@@ -180,27 +284,395 @@ for describing.</P></SECTION><SECTION id="status">
                 </TBODY>
   </TABLE>
     
+  <TABLE class="definition" id="description">
+    <TBODY>
+    <TR>
+      <TH>Datatype property</TH>
+      <TH><A 
+    href="#description">essim:description</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Description</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>An effective description is 25-30 words long or approximately 150 characters.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Mandatory</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>1..*</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/description">dc:description</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
 
-<TABLE class="definition" id="creatorInstitution">
-  <TBODY>
-  <TR>
-    <TH>Object property</TH>
-    <TH><A 
-      href="#creatorInstitution">essim:creatorInstitution</A></TH></TR>
-  <TBODY>
-  <TR>
-    <TD class="prop">label</TD>
-    <TD>Creator Institution</TD></TR>
-  <TR>
-    <TD class="prop">comment</TD>
-    <TD>..</TD></TR>
-  <TR>
-    <TD class="prop">domain</TD>
-    <TD><A href="#Field">essim:Field</A></TD></TR>
-  <TR>
-    <TD class="prop">range</TD>
-    <TD><A href="http://github.socialsecu.io/ir#Institution">ir:Institution</A></TD></TR></TBODY></TABLE>
+  <TABLE class="definition" id="format">
+    <TBODY>
+    <TR>
+      <TH>Datatype property</TH>
+      <TH><A 
+    href="#format">essim:format</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Format</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Format of the data.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Mandatory</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>1..1</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/format">dc:format</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+  
+  <TABLE class="definition" id="identifier">
+    <TBODY>
+    <TR>
+      <TH>Datatype property</TH>
+      <TH><A 
+    href="#identifier">essim:identifier</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Identifier</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Identifier of the data (field).</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..1</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/identifier">dc:identifier</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="language">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#language">essim:language</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Language</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Language of the data when not numeric.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language">iso639-1:iso639-1_Language</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Conditional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..1</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/language">dc:language</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="mandate">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#mandate">essim:mandate</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Mandate</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Legal reference of the exchanges where data is involved.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="https://socialsec.github.io/voc/eurlex/#Regulation">eurlex:Regulation</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..*</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/relation">dc:relation</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="references">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#references">essim:references</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>References</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Official documents where data is present.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="https://socialsec.github.io/voc/od/#Document">od:Document</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..*</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/relation">dc:relation</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="relationWithTerms">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#relationWithTerms">essim:relationWithTerms</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Relation with Terms</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Description of relationship between the data and other terms, different of the dataTerm.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="#Relation">essim:Relation</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..*</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/relation">dc:relation</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="senderInstitution">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#senderInstitution">essim:senderInstitution</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Sender Institution</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Social security institution  responsible for sending the data.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="https://socialsec.github.io/voc/ir/#Institution">ir:Institution</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Optional</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>0..1</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/publisher">dc:publisher</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="socialSecurityCategory">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#socialSecurityCategory">essim:socialSecurityCategory</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Social Security Category</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Branch of social security involved in the exchange of data.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Field</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="https://socialsec.github.io/voc/ir/#Category">ir:Category</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Mandatory</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>1..1</TD>
+        </TR> 
+      <TR>
+        <TD class="prop">subPropertyOf</TD>
+          <TD><A 
+              href="http://purl.org/dc/elements/1.1/coverage">dc:coverage</A></TD></TR>
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="relationTerm">
+    <TBODY>
+    <TR>
+      <TH>Object property</TH>
+      <TH><A 
+    href="#relationTerm">essim:relationTerm</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Relation Term</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Term involved in a relation between a data and a term of the Glossary of Terms.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Relation</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="https://socialsec.github.io/voc/got/#Term">got:Term</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Mandatory</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>1..1</TD>
+        </TR> 
+            
+                </TBODY>
+  </TABLE>
+
+  <TABLE class="definition" id="relationDescription">
+    <TBODY>
+    <TR>
+      <TH>Datatype property</TH>
+      <TH><A 
+    href="#relationDescription">essim:relationDescription</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Relation Description</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Description of a relation between a data and a term of the Glossary of Terms.</TD></TR>
+    <TR>
+      <TD class="prop">domain</TD>
+      <TD><A href="#Field">essim:Relation</A></TD></TR>
+      <TR>
+          <TD class="prop">range</TD>
+          <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          <TR>
+            <TD class="prop">obligation</TD>
+            <TD>Mandatory</TD>
+        </TR>
+        <TR>
+          <TD class="prop">multiplicity</TD>
+          <TD>1..1</TD>
+        </TR> 
+            
+                </TBODY>
+  </TABLE>
+
 
 <FOOTER>
 <P>Last updated: $Date: 2018-11-01 15:25:02 $</P>
-<P><A href="http://www.w3.org/People/all#phila">Social Security Vocabularies</A>, <A href="mailto:phila@w3.org">phila@w3.org</A>.</P></FOOTER></BODY></HTML>
+<P><A href="https://socialsec.github.io/voc/">Social Security Vocabularies</A>.</P></FOOTER></BODY></HTML>

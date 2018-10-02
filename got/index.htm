@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-GB" lang="en-GB" xml:lang="en-GB" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   
+<META charset="utf-8">   
+<META name="viewport" content="width=device-width"> 
+  
+<META name="viewport" content="width=device-width">   <TITLE>GOT Vocabulary</TITLE>   <LINK href="got.ttl" rel="alternate" type="text/turtle"> 
+  <LINK href="http://www.w3.org/StyleSheets/TR/base.css" rel="stylesheet" type="text/css"> 
+  
+<STYLE type="text/css">
+  footer p {text-align:right; font-style:italic}
+  table {border-collapse:collapse; caption-side:bottom}
+  td, th {border:1px solid black; padding:0.2em}
+  table caption {font-style:italic; padding:0.3em 0}
+  section#namespaces td {font-family:monospace}
+  table.definition {margin-top:1em; width:100%}
+  table.definition td.prop {width:10em}
+  </STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY><HEADER>
+<H1>GOT Vocabulary</H1>
+<P>This document is also available as an <A href="got.ttl">RDF 
+schema</A> </P></HEADER><SECTION id="abstract">
+<H2>Abstract</H2>
+<P>The GOT Vocabulary provides a minimum set of classes and properties 
+for describing terms included in the Glossary of Terms.</P></SECTION><SECTION id="status">
+<H2>Status</H2>
+<P>The GOT Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://socialsec.github.io/voc/">https://socialsec.github.io/voc/</A>. 
+<P>Copyright © 2018 UAH, ISSA</P>
+<P>The vocabulary is published under the Open Metadata Licence.</P></SECTION>
+<HR>
+<SECTION id="namespaces">
+<H2>Namespaces used</H2>
+<TABLE>
+  <CAPTION>Namespaces used in this schema</CAPTION>
+  <TBODY>
+  <TR>
+    <TH>prefix</TH>
+    <TH>namespace</TH></TR>
+  <TBODY>
+  <TR>
+    <TD>rdf</TD>
+    <TD>http://www.w3.org/1999/02/22-rdf-syntax-ns#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+    <TR>
+        <TD>rdfs</TD>
+        <TD>http://www.w3.org/2000/01/rdf-schema#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+    <TR>
+          <TD>got</TD>
+          <TD>https://socialsec.github.io/voc/got/#</TD></TR>
+
+
+
+  </TBODY></TABLE>
+</SECTION>
+<H2 id="summary">Summary of terms</H2>
+<P>The GOT Vocabulary defines the following terms.</P>
+<TABLE class="definition" id="Term">
+  <TBODY>
+  <TR>
+    <TH>Class</TH>
+    <TH><A href="#Term">got:Term</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Term</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Term included in the Glossary of Terms.</TD></TR>
+  </TBODY></TABLE>
+
+
+<TABLE class="definition" id="termCode">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#termCode">got:termCode</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Term Code</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Match with column4 of Term description in GOT.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">got:Term</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="termName">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#termName">got:termName</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Term Name</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Match with column3 of Term description in GOT.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">got:Term</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="IC007">
+  <TBODY>
+  <TR>
+    <TH>Instance</TH>
+    <TH><A 
+  href="#IC007">got:IC007</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">rdf:type</TD>
+    <TD>got:Term</TD></TR>
+  <TR>
+    <TD class="prop">got:termCode</TD>
+    <TD>"IC007"</TD></TR>
+  <TR>
+    <TD class="prop">got:termName</TD>
+    <TD>"Place of birth"</TD></TR>
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="IC007_SP">
+  <TBODY>
+  <TR>
+    <TH>Instance</TH>
+    <TH><A 
+  href="#IC007_SP">got:IC007_SP</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">rdf:type</TD>
+    <TD>got:Term</TD></TR>
+  <TR>
+    <TD class="prop">got:termCode</TD>
+    <TD>"IC007_SP"</TD></TR>
+  <TR>
+    <TD class="prop">got:termName</TD>
+    <TD>"Lugar de nacimiento"</TD></TR>
+  </TBODY>
+</TABLE>
+
+<FOOTER>
+<P>Last updated: $Date: 2018-11-01 15:25:02 $</P>
+<P><A href="https://socialsec.github.io/voc/">Social Security Vocabularies</A>.</P></FOOTER></BODY></HTML>
