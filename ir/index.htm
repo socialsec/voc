@@ -1,0 +1,331 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-GB" lang="en-GB" xml:lang="en-GB" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   
+<META charset="utf-8">   
+<META name="viewport" content="width=device-width"> 
+  
+<META name="viewport" content="width=device-width">   <TITLE>IR Vocabulary</TITLE>   <LINK href="ir.ttl" rel="alternate" type="text/turtle"> 
+  <LINK href="http://www.w3.org/StyleSheets/TR/base.css" rel="stylesheet" type="text/css"> 
+  
+<STYLE type="text/css">
+  footer p {text-align:right; font-style:italic}
+  table {border-collapse:collapse; caption-side:bottom}
+  td, th {border:1px solid black; padding:0.2em}
+  table caption {font-style:italic; padding:0.3em 0}
+  section#namespaces td {font-family:monospace}
+  table.definition {margin-top:1em; width:100%}
+  table.definition td.prop {width:10em}
+  </STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY><HEADER>
+<H1>IR Vocabulary</H1>
+<P>This document is also available as an <A href="ir.ttl">RDF 
+schema</A> </P></HEADER><SECTION id="abstract">
+<H2>Abstract</H2>
+<P>The IR Vocabulary provides a minimum set of classes and properties 
+for describing institutions included in the Institutions Repository.</P></SECTION><SECTION id="status">
+<H2>Status</H2>
+<P>The IR Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://socialsec.github.io/voc/">https://socialsec.github.io/voc/</A>. 
+<P>Copyright © 2018 <A href="https://www.uah.es/en">UAH</A>, <A href="https://www.issa.int/en">ISSA</A></P>
+<P>The vocabulary is published under <A href="https://creativecommons.org/licenses/by/4.0/">CC BY Licence.</A></P></SECTION>
+<HR>
+<SECTION id="namespaces">
+<H2>Namespaces used</H2>
+<TABLE>
+  <CAPTION>Namespaces used in this schema</CAPTION>
+  <TBODY>
+  <TR>
+    <TH>prefix</TH>
+    <TH>namespace</TH></TR>
+  <TBODY>
+  <TR>
+    <TD>rdf</TD>
+    <TD>http://www.w3.org/1999/02/22-rdf-syntax-ns#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+    <TR>
+        <TD>rdfs</TD>
+        <TD>http://www.w3.org/2000/01/rdf-schema#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
+    <TR>
+          <TD>ir</TD>
+          <TD>https://socialsec.github.io/voc/ir/#</TD></TR>
+
+
+
+  </TBODY></TABLE>
+</SECTION>
+<H2 id="summary">Summary of terms</H2>
+<P>The IR Vocabulary defines the following terms.</P>
+<TABLE class="definition" id="Institution">
+  <TBODY>
+  <TR>
+    <TH>Class</TH>
+    <TH><A href="#Institution">ir:Institution</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Institution</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Institution included in the Institution Repository.</TD></TR>
+  </TBODY></TABLE>
+
+  <TABLE class="definition" id="Category">
+    <TBODY>
+    <TR>
+      <TH>Class</TH>
+      <TH><A href="#Category">ir:Category</A></TH></TR>
+    <TBODY>
+    <TR>
+      <TD class="prop">label</TD>
+      <TD>Category</TD></TR>
+    <TR>
+      <TD class="prop">comment</TD>
+      <TD>Category in Social Security context.</TD></TR>
+    </TBODY></TABLE>
+
+<TABLE class="definition" id="id">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#id">ir:id</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Id</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Identifier of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="acronym">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#acronym">ir:acronym</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Acronym</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Acronym of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="fullName">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#fullName">ir:fullName</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Full Name</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Full name of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="fullName2">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#fullName2">ir:fullName2</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Full Name 2</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Second Full name of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="fullName3">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#fullName3">ir:fullName3</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Full Name 3</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Third Full name of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="fullNameEnglish">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#fullNameEnglish">ir:fullNameEnglish</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Full Name in English</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Full name in English of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="fullNameLatin">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#fullNameLatin">ir:fullNameLatin</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>Full Name in Latin</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Full name in Latin characters of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="category">
+  <TBODY>
+  <TR>
+    <TH>Object property</TH>
+    <TH><A 
+  href="#category">ir:category</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>category</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Category of an institution.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Field">ir:Institution</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="#Category">ir:Category</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="categoryId">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#categoryId">ir:categoryId</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>category Id</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Identifier of an institution category.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Category">ir:Category</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<TABLE class="definition" id="categoryValue">
+  <TBODY>
+  <TR>
+    <TH>Datatype property</TH>
+    <TH><A 
+  href="#categoryValue">ir:categoryValue</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>category value</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Name of an institution category.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Category">ir:Category</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+          href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
+
+<FOOTER>
+<P>Last updated: $Date: 2018-11-01 15:25:02 $</P>
+<P><A href="https://socialsec.github.io/voc/">Social Security Vocabularies</A>.</P>
+</FOOTER></BODY></HTML>

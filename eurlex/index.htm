@@ -6,7 +6,7 @@ http-equiv="X-UA-Compatible">
 <META charset="utf-8">   
 <META name="viewport" content="width=device-width"> 
   
-<META name="viewport" content="width=device-width">   <TITLE>GOT Vocabulary</TITLE>   <LINK href="got.ttl" rel="alternate" type="text/turtle"> 
+<META name="viewport" content="width=device-width">   <TITLE>EURLEX Vocabulary</TITLE>   <LINK href="eurlex.ttl" rel="alternate" type="text/turtle"> 
   <LINK href="http://www.w3.org/StyleSheets/TR/base.css" rel="stylesheet" type="text/css"> 
   
 <STYLE type="text/css">
@@ -21,14 +21,14 @@ http-equiv="X-UA-Compatible">
  
 <META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
 <BODY><HEADER>
-<H1>GOT Vocabulary</H1>
-<P>This document is also available as an <A href="got.ttl">RDF 
+<H1>EURLEX Vocabulary</H1>
+<P>This document is also available as an <A href="eurlex.ttl">RDF 
 schema</A> </P></HEADER><SECTION id="abstract">
 <H2>Abstract</H2>
-<P>The GOT Vocabulary provides a minimum set of classes and properties 
-for describing terms included in the Glossary of Terms.</P></SECTION><SECTION id="status">
+<P>The EURLEX Vocabulary provides a minimum set of classes and properties for describing European legislation.</P></SECTION>
+<SECTION id="status">
 <H2>Status</H2>
-<P>The GOT Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://socialsec.github.io/voc/">https://socialsec.github.io/voc/</A>. 
+<P>The EURLEX Vocabulary was developed by UAH and ISSA and all documentation is available on <A href="https://socialsec.github.io/voc/">https://socialsec.github.io/voc/</A>. 
 <P>Copyright © 2018 <A href="https://www.uah.es/en">UAH</A>, <A href="https://www.issa.int/en">ISSA</A></P>
 <P>The vocabulary is published under <A href="https://creativecommons.org/licenses/by/4.0/">CC BY Licence.</A></P></SECTION>
 <HR>
@@ -48,46 +48,46 @@ for describing terms included in the Glossary of Terms.</P></SECTION><SECTION id
         <TD>rdfs</TD>
         <TD>http://www.w3.org/2000/01/rdf-schema#</TD></TR><!--  <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr> --> <!--  <tr><td>wdrs</td><td>http://www.w3.org/2007/05/powder-s#</td></tr> --> 
     <TR>
-          <TD>got</TD>
-          <TD>https://socialsec.github.io/voc/got/#</TD></TR>
+          <TD>eurlex</TD>
+          <TD>https://socialsec.github.io/voc/eurlex/#</TD></TR>
 
 
 
   </TBODY></TABLE>
 </SECTION>
 <H2 id="summary">Summary of terms</H2>
-<P>The GOT Vocabulary defines the following terms.</P>
-<TABLE class="definition" id="Term">
+<P>The EURLEX Vocabulary defines the following terms.</P>
+<TABLE class="definition" id="Regulation">
   <TBODY>
   <TR>
     <TH>Class</TH>
-    <TH><A href="#Term">got:Term</A></TH></TR>
+    <TH><A href="#Regulation">eurlex:Regulation</A></TH></TR>
   <TBODY>
   <TR>
     <TD class="prop">label</TD>
-    <TD>Term</TD></TR>
+    <TD>Regulation</TD></TR>
   <TR>
     <TD class="prop">comment</TD>
-    <TD>Term included in the Glossary of Terms.</TD></TR>
+    <TD>Regulation published by the European Union.</TD></TR>
   </TBODY></TABLE>
 
 
-<TABLE class="definition" id="termCode">
+<TABLE class="definition" id="id">
   <TBODY>
   <TR>
     <TH>Datatype property</TH>
     <TH><A 
-  href="#termCode">got:termCode</A></TH></TR>
+  href="#id">eurlex:id</A></TH></TR>
   <TBODY>
   <TR>
     <TD class="prop">label</TD>
-    <TD>Term Code</TD></TR>
+    <TD>id</TD></TR>
   <TR>
     <TD class="prop">comment</TD>
-    <TD>Match with column4 of Term description in GOT.</TD></TR>
+    <TD>Identifier of a regulation.</TD></TR>
   <TR>
     <TD class="prop">domain</TD>
-    <TD><A href="#Field">got:Term</A></TD></TR>
+    <TD><A href="#Regulation">eurlex:Regulation</A></TD></TR>
     <TR>
         <TD class="prop">range</TD>
         <TD><A 
@@ -96,22 +96,22 @@ for describing terms included in the Glossary of Terms.</P></SECTION><SECTION id
   </TBODY>
 </TABLE>
 
-<TABLE class="definition" id="termName">
+<TABLE class="definition" id="title">
   <TBODY>
   <TR>
     <TH>Datatype property</TH>
     <TH><A 
-  href="#termName">got:termName</A></TH></TR>
+  href="#title">eurlex:title</A></TH></TR>
   <TBODY>
   <TR>
     <TD class="prop">label</TD>
-    <TD>Term Name</TD></TR>
+    <TD>title</TD></TR>
   <TR>
     <TD class="prop">comment</TD>
-    <TD>Match with column3 of Term description in GOT.</TD></TR>
+    <TD>Name of a regulation.</TD></TR>
   <TR>
     <TD class="prop">domain</TD>
-    <TD><A href="#Field">got:Term</A></TD></TR>
+    <TD><A href="#Document">eurlex:Regulation</A></TD></TR>
     <TR>
         <TD class="prop">range</TD>
         <TD><A 
@@ -121,10 +121,55 @@ for describing terms included in the Glossary of Terms.</P></SECTION><SECTION id
 </TABLE>
 
 
+<TABLE class="definition" id="fullTextEnglish">
+  <TBODY>
+  <TR>
+    <TH>Object property</TH>
+    <TH><A 
+  href="#fullTextEnglish">eurlex:fullTextEnglish</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>full text in English</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Document with the full text of a regulation in English.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Regulation">eurlex:Regulation</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
 
-
+<TABLE class="definition" id="fullTexSpanish">
+  <TBODY>
+  <TR>
+    <TH>Object property</TH>
+    <TH><A 
+  href="#fullTexSpanish">eurlex:fullTexSpanish</A></TH></TR>
+  <TBODY>
+  <TR>
+    <TD class="prop">label</TD>
+    <TD>full text in Spanish</TD></TR>
+  <TR>
+    <TD class="prop">comment</TD>
+    <TD>Document with the full text of a regulation in Spanish.</TD></TR>
+  <TR>
+    <TD class="prop">domain</TD>
+    <TD><A href="#Regulation">eurlex:Regulation</A></TD></TR>
+    <TR>
+        <TD class="prop">range</TD>
+        <TD><A 
+        href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</A></TD></TR>
+          
+  </TBODY>
+</TABLE>
 
 <FOOTER>
 <P>Last updated: $Date: 2018-11-01 15:25:02 $</P>
 <P><A href="https://socialsec.github.io/voc/">Social Security Vocabularies</A>.</P>
-<P>available under a Creative Commons Attribution 4.0 Unported license. Third-party materials are the copyright of their respective owners and shared under various licenses. See detailed licensing information</P></FOOTER></BODY></HTML>
+</FOOTER></BODY></HTML>
