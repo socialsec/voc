@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix eurlex: <https://socialsec.github.io/voc/eurlex/#> .
+
+#****************************************
+#**********EUR-LEX VOCABULARY************
+#****************************************
+
+# Classes  
+
+eurlex:Regulation
+  a rdfs:Class ;
+  rdfs:label "Regulation"@en ;   
+  rdfs:comment "Regulation about Social Security"@en .
+
+# Properties
+
+eurlex:id
+  a rdf:Property ;
+  rdfs:domain eurlex:Regulation ;
+  rdfs:range rdfs:Literal . 
+
+dc:title
+  a rdf:Property ;
+  rdfs:domain ir:Regulation ;
+  rdfs:range rdfs:Literal . 
+
+eurlex:fullTextEnglish
+  a rdf:Property ;
+  rdfs:domain ir:Regulation ;
+  rdfs:range rdfs:Resource . 
+  
+eurlex:fullTexSpanish
+  a rdf:Property ;
+  rdfs:domain ir:Regulation ;
+  rdfs:range rdfs:Resource . 
+  
+# Resources
+  
+eurlex:32004R0883
+  a eurlex:Regulation ;
+  eurlex:id "32004R0883" ;
+  dc:title "Regulation (EC) No 883/2004 of the European Parliament and of the Council of 29 April 2004 on the coordination of social security systems (Text with relevance for the EEA and for Switzerland)" ;
+  eurlex:fulltextenglish <http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32004R0883&qid=1437065889270&from=EN> ;
+  eurlex:fulltextspanish <http://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32004R0883&qid=1437065889270&from=EN> .
+
+eurlex:32009R0987
+  a eurlex:Regulation ;
+  eurlex:id "32009R0987" ;
+  dc:title "Regulation (EC) No 987/2009 of the European Parliament and of the Council of 16 September 2009 laying down the procedure for implementing Regulation (EC) No 883/2004 on the coordination of social security systems (Text with relevance for the EEA and for Switzerland)" ;
+  eurlex:fulltextenglish <http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32009R0987&qid=1437066151142&from=EN> ;
+  eurlex:fulltextspanish <http://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32009R0987&qid=1437066151142&from=EN> .
+  

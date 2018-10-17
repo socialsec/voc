@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix od: <https://socialsec.github.io/voc/od/#> .
+
+
+#***************************************************
+#**********OFFICIAL DOCUMENTS VOCABULARY************
+#***************************************************
+
+# Classes
+
+od:Document
+  a rdfs:Class ;
+  rdfs:label "Document"@en ;   
+  rdfs:comment "Official document for social security issues."@en .
+
+od:Form
+  a rdfs:Class ;
+  rdfs:subClassOf od:Document ;
+  rdfs:label "Form"@en ;   
+  rdfs:comment "A form document."@en .
+
+od:P-Form
+  a rdfs:Class ;
+  rdfs:subClassOf od:Form ;
+  rdfs:label "P-Form"@en ;   
+  rdfs:comment "A form related to pensions."@en .
+
+# Properties
+
+od:id
+  a rdf:Property ;
+  rdfs:domain od:Document ;
+  rdfs:range rdfs:Literal . 
+  
+od:title
+  a rdf:Property ;
+  rdfs:domain od:Document ;
+  rdfs:range rdfs:Literal . 
+  
+od:template
+  a rdf:Property ;
+  rdfs:domain od:Document ;
+  rdfs:range rdfs:Resource . 
+
+# Resources
+  
+od:P5000
+  a od:P-Form ;
+  od:id "P5000" ;
+  od:title "P5000 Insurance/residence periods"@en ;
+  od:template <http://od.org/templates/P5000.docx> .
+
+od:P9000
+  a od:Form ;
+  od:id "p9000" ;
+  od:title "P9000 Reply to request for additional information"@es ;
+  od:template <http://od.org/templates/P9000.docx> .
+

@@ -1,0 +1,101 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ir: <https://socialsec.github.io/voc/ir/#> .
+
+#*******************************************************
+#**********INSTITUTION REPOSITORY VOCABULARY************
+#*******************************************************
+
+# Classes
+
+ir:Institution
+  a rdfs:Class ;
+  rdfs:label "Institution"@en ;   
+  rdfs:comment "Institution included in the Institution Repository."@en .
+
+ir:Category
+  a rdfs:Class ;
+  rdfs:label "Category"@en ;   
+  rdfs:comment "Category in Social Security context."@en .
+
+# Properties
+
+ir:id
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:acronym
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:fullName
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:fullName2
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:fullName3
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:fullNameEnglish
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+
+ir:fullNameLatin
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range rdfs:Literal . 
+  
+ir:category
+  a rdf:Property ;
+  rdfs:domain ir:Institution ;
+  rdfs:range ir:Category . 
+  
+ir:categoryId
+  a rdf:Property ;
+  rdfs:domain ir:Category ;
+  rdfs:range rdfs:Literal . 
+
+ir:categoryValue
+  a rdf:Property ;
+  rdfs:domain ir:Category ;
+  rdfs:range rdfs:Literal . 
+
+# Resources
+
+ir:2800
+  a ir:Institution ;
+  ir:id "2800" ;
+  ir:acronym "INSS MADRID" ;
+  ir:fullName "INSTITUTO NACIONAL DE LA SEGURIDAD SOCIAL DE MADRID DIRECCION PROVINCIAL" ;
+  ir:fullName2 "" ;
+  ir:fullName3 "" ;
+  ir:fullNameEnglish "National Institute of Social Security. Provincial Head Office of Madrid" ;
+  ir:fullNameLatin "" ;
+  ir:category ir:CAT21006 .
+
+ir:3656
+  a ir:Institution ;
+  ir:id "3656" ;
+  ir:acronym "ISM VILLAGARCIA" ;
+  ir:fullName "INSTITUTO SOCIAL DE LA MARINA DIRECCION PROVINCIAL DE VILLAGARCIA" ;
+  ir:fullName2 "" ;
+  ir:fullName3 "" ;
+  ir:fullNameEnglish "Social Institute for Mariners. Provincial Head Office of Villagarcía" ;
+  ir:fullNameLatin "";
+  ir:category ir:CAT21006 .
+
+ir:CAT21006
+  a ir:Category ;
+  ir:categoryId "21006" ;
+  ir:categoryValue "Old Age pensions – state pension scheme" .
+

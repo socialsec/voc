@@ -1,0 +1,144 @@
+# Existed RDF vocabularies
+@prefix cvmap: <http://data.europa.eu/core-vocabularies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iso639-1: <http://id.loc.gov/vocabulary/iso639-1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix essim: <https://socialsec.github.io/voc/essim/#> .
+@prefix eurlex: <https://socialsec.github.io/voc/eurlex/#> .
+@prefix got: <https://socialsec.github.io/voc/got/#> .
+@prefix ir: <https://socialsec.github.io/voc/ir/#> .
+@prefix od: <https://socialsec.github.io/voc/od/#> .
+
+#*************************************
+#**********ESSM VOCABULARY************
+#*************************************
+
+# Classes
+
+essim:Field
+  a rdfs:Class ;
+  rdfs:label "Data field"@en ;   
+  rdfs:comment "Data field in a Social Security form"@en .
+
+essim:Relation
+  a rdfs:Class ;
+  rdfs:label "Relation"@en ;   
+  rdfs:comment "Relation between a data field and a term in the Glossary of Terms"@en .
+
+
+# Properties (domain: Field)
+
+essim:creatorInstitution
+  a rdf:Property ;
+  rdfs:label "Creator Institution"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range ir:Institution ;
+  rdfs:subPropertyOf dc:creator .
+
+essim:dataSet
+  a rdf:Property ;
+  rdfs:label "Data Set"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range cvmap:Mapping ;
+  rdfs:subPropertyOf dc:subject .
+  
+essim:dataTerm
+  a rdf:Property ;
+  rdfs:label "Data Term"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range got:Term ;
+  rdfs:subPropertyOf dc:date .
+
+essim:dateCreated
+  a rdf:Property ;
+  rdfs:label "Date Created"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:date .
+
+essim:dateModified
+  a rdf:Property ;
+  rdfs:label "Date Modified"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:date .
+  
+essim:description
+  a rdf:Property ;
+  rdfs:label "Description"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:description .
+
+essim:format
+  a rdf:Property ;
+  rdfs:label "Format"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:format .
+
+essim:identifier
+  a rdf:Property ;
+  rdfs:label "Identifier"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:identifier .
+
+essim:language
+  a rdf:Property ;
+  rdfs:label "Language"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range iso639-1:iso639-1_Language ;
+  rdfs:subPropertyOf dc:language .
+
+essim:mandate
+  a rdf:Property ;
+  rdfs:label "Mandate"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range eurlex:Regulation .
+
+essim:references
+  a rdf:Property ;
+  rdfs:label "References"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range od:Document .
+
+essim:relationWithTerms
+  a rdf:Property ;
+  rdfs:label "Relation with Terms"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range essim:Relation ;
+  rdfs:subPropertyOf dc:relation .
+
+essim:senderInstitution
+  a rdf:Property ;
+  rdfs:label "Sender Institution"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range ir:Institution ;
+  rdfs:subPropertyOf dc:publisher .
+
+essim:socialSecurityCategory
+  a rdf:Property ;
+  rdfs:label "Social Security Category"@en ;
+  rdfs:domain essim:Field ;
+  rdfs:range ir:Category ;
+  rdfs:subPropertyOf dc:coverage .
+
+
+# Properties (domain: Relation)
+
+essim:relationTerm
+  a rdf:Property ;
+  rdfs:label "Relation Term"@en ;
+  rdfs:domain essim:Relation ;
+  rdfs:range got:Term .
+
+essim:relationDesription
+  a rdf:Property ;
+  rdfs:label "Relation Description"@en ;
+  rdfs:domain essim:Relation ;
+  rdfs:range rdfs:Literal .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix got: <https://socialsec.github.io/voc/got/#> .
+
+#**************************************************
+#**********GLOSSARY OF TERMS VOCABULARY************
+#**************************************************
+
+# Classes
+
+got:Term
+  a rdfs:Class ;
+  rdfs:label "Term"@en ;   
+  rdfs:comment "Term included in the Glossary of Terms"@en .
+  
+# Properties
+
+got:termCode
+  a rdf:Property ;
+  rdfs:domain got:Term ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "Match with column4 of Term description in GOT"@en . 
+
+got:termName
+  a rdf:Property ;
+  rdfs:domain got:Term ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "Match with column3 of Term description in GOT"@en . 
+
+# Resources (Individuals, Instances)
+
+
+got:IC007
+  a got:Term ;
+  got:termCode "IC007" ;
+  got:termName "Place of birth"@en .
+
+got:IC007_SP
+  a got:Term ;
+  got:termCode "IC007_SP" ;
+  got:termName "Lugar de nacimiento"@es .
+
