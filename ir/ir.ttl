@@ -16,7 +16,7 @@ ir:Institution
 ir:Category
   a rdfs:Class ;
   rdfs:label "Category"@en ;   
-  rdfs:comment "Category in Social Security context."@en .
+  rdfs:comment "Category of Social Security (CSS)."@en .
 
 # Properties
 
@@ -65,10 +65,16 @@ ir:categoryId
   rdfs:domain ir:Category ;
   rdfs:range rdfs:Literal . 
 
-ir:categoryValue
+ir:categoryName
   a rdf:Property ;
   rdfs:domain ir:Category ;
   rdfs:range rdfs:Literal . 
+
+ir:categoryDescription
+  a rdf:Property ;
+  rdfs:domain ir:Category ;
+  rdfs:range rdfs:Literal . 
+
 
 # Resources
 
@@ -76,26 +82,81 @@ ir:2800
   a ir:Institution ;
   ir:id "2800" ;
   ir:acronym "INSS MADRID" ;
-  ir:fullName "INSTITUTO NACIONAL DE LA SEGURIDAD SOCIAL DE MADRID DIRECCION PROVINCIAL" ;
+  ir:fullName "INSTITUTO NACIONAL DE LA SEGURIDAD SOCIAL DE MADRID DIRECCION PROVINCIAL"@es ;
   ir:fullName2 "" ;
   ir:fullName3 "" ;
-  ir:fullNameEnglish "National Institute of Social Security. Provincial Head Office of Madrid" ;
+  ir:fullNameEnglish "National Institute of Social Security. Provincial Head Office of Madrid"@en ;
   ir:fullNameLatin "" ;
-  ir:category ir:CAT21006 .
+  ir:category ir:CSS21001, ir:CSS21003, ir:CSS21004, ir:CSS21008, ir:CSS21009, ir:CSS21011, ir:CSS21014 . 
 
 ir:3656
   a ir:Institution ;
   ir:id "3656" ;
   ir:acronym "ISM VILLAGARCIA" ;
-  ir:fullName "INSTITUTO SOCIAL DE LA MARINA DIRECCION PROVINCIAL DE VILLAGARCIA" ;
+  ir:fullName "INSTITUTO SOCIAL DE LA MARINA DIRECCION PROVINCIAL DE VILLAGARCIA"@es ;
   ir:fullName2 "" ;
   ir:fullName3 "" ;
-  ir:fullNameEnglish "Social Institute for Mariners. Provincial Head Office of Villagarcía" ;
+  ir:fullNameEnglish "Social Institute for Mariners. Provincial Head Office of Villagarcía"@en ;
   ir:fullNameLatin "";
-  ir:category ir:CAT21006 .
+  ir:category ir:CSS21001, ir:CSS21003, ir:CSS21004, ir:CSS21008, ir:CSS21009, ir:CSS21011, ir:CSS21012 . 
 
-ir:CAT21006
+ir:6000
+  a ir:Institution ;
+  ir:id "6000" ;
+  ir:acronym "INSS ORG. ENLACE" ;
+  ir:fullName "INSTITUTO NACIONAL DE LA SEGURIDAD SOCIAL DIRECCION GENERAL"@es ;
+  ir:fullName2 "" ;
+  ir:fullName3 "" ;
+  ir:fullNameEnglish "National Institute of Social Security. General Directorate"@en ;
+  ir:fullNameLatin "";
+  ir:category ir:CSS21001, ir:CSS21002, ir:CSS21003, ir:CSS21004, ir:CSS21006, ir:CSS21008, ir:CSS21009, ir:CSS21011, ir:CSS21014 . 
+
+ir:CSS21001
+  a ir:Category ;
+  ir:categoryId "21001" ;
+  ir:categoryName "Sickness benefits"@en .
+
+ir:CSS21002
+  a ir:Category ;
+  ir:categoryId "21002" ;
+  ir:categoryName "Long-term care benefits"@en .
+
+ir:CSS21003
+  a ir:Category ;
+  ir:categoryId "21003" ;
+  ir:categoryName "Maternity, paternity benefits"@en .
+
+ir:CSS21004
+  a ir:Category ;
+  ir:categoryId "21004" ;
+  ir:categoryName "Invalidity – state invalidity pension scheme"@en .
+
+ir:CSS21006
   a ir:Category ;
   ir:categoryId "21006" ;
-  ir:categoryValue "Old Age pensions – state pension scheme" .
+  ir:categoryName "Old Age pensions – state pension scheme"@en .
 
+ir:CSS21008
+  a ir:Category ;
+  ir:categoryId "21008" ;
+  ir:categoryName "Survivors’ pension - state pension scheme"@en .
+
+ir:CSS21009
+  a ir:Category ;
+  ir:categoryId "21009" ;
+  ir:categoryName "Accident at work and Occupational Diseases benefits"@en .
+
+ir:CSS21011
+  a ir:Category ;
+  ir:categoryId "21011" ;
+  ir:categoryName "Death Grants"@en .
+
+ir:CSS21012
+  a ir:Category ;
+  ir:categoryId "21012" ;
+  ir:categoryName "Unemployment benefits"@en .
+
+ir:CSS21014
+  a ir:Category ;
+  ir:categoryId "21014" ;
+  ir:categoryName "Family benefits – other than child raising benefits"@en .

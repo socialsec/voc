@@ -1,0 +1,51 @@
+{
+ "@context": {
+  "cvmap": "http://data.europa.eu/cv/",
+  "essim": "https://socialsec.github.io/voc/essim/#",
+  "eurlex": "https://socialsec.github.io/voc/eurlex/#",
+  "got": "https://socialsec.github.io/voc/got/#",
+  "ir": "https://socialsec.github.io/voc/ir/#",
+  "iso639-1": "http://id.loc.gov/vocabulary/iso639-1/",
+  "od": "https://socialsec.github.io/voc/od/#",
+  "person": "https://joinup.ec.europa.eu/sites/default/files/distribution/2013-10/person-v1.00.rdf#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+ "@type": "essim:Field",
+ "essim:creatorInstitution": {"@id": "ir:2800"},
+ "essim:dataSet": {
+    "@type": "cvmap:Mapping",
+    "cvmap:coreVocURI": {"@id": "person:familyName"},
+    "cvmap:mappingRelation": {"@id": "cvmap:hasCloseMatch"}
+    },
+ "essim:dataTerm": {"@id": "got:IC001"},
+ "essim:dateCreated": {
+    "@value": "2014-05-30",
+    "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+ "essim:dateModified": {
+    "@value": "2015-02-24",
+    "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+ "essim:description": {
+    "@value": "Oficial name of a person",
+    "@language": "en"
+    },
+ "essim:format": {
+    "@value": "Alphabetic text",
+    "@language": "en"
+    },
+ "essim:identifier": {"@value": "surname"},
+ "essim:language": {"@id": "iso639-1:en"},
+ "essim:mandate": {"@id": "eurlex:32004R0883"},
+ "essim:references": {"@id": "od:E101"},
+ "essim:relationWithTerms": {
+    "@type": "essim:Relation",
+    "essim:relationTerm": {"@id": "got:IC004"},
+    "essim:relationDescription": {
+        "@value": "The Surname value has officially substituted the previous names of the person",
+        "@language": "en"
+        }
+    },
+ "essim:senderInstitution": {"@id": "ir:6000"},
+ "essim:socialSecurityCategory": {"@id": "ir:CSS21003"}
+}

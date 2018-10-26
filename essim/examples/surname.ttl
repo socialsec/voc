@@ -1,0 +1,34 @@
+#***********************************************
+# Example "Surname" field in a data exchange
+#***********************************************
+
+@prefix cvmap: <http://data.europa.eu/cv/> .
+@prefix essim: <https://socialsec.github.io/voc/essim/#> .
+@prefix eurlex: <https://socialsec.github.io/voc/eurlex/#> .
+@prefix got: <https://socialsec.github.io/voc/got/#> .
+@prefix ir: <https://socialsec.github.io/voc/ir/#> .
+@prefix iso639-1: <http://id.loc.gov/vocabulary/iso639-1/> .
+@prefix od: <https://socialsec.github.io/voc/od/#> .
+@prefix person: <https://joinup.ec.europa.eu/sites/default/files/distribution/2013-10/person-v1.00.rdf#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+  a essim:Field ;
+  essim:creatorInstitution ir:2800;
+  essim:dataSet [a cvmap:Mapping; 
+                 cvmap:coreVocURI person:familyName;
+                 cvmap:mappingRelation cvmap:hasCloseMatch];
+  essim:dataTerm  got:IC001;
+  essim:dateCreated "2014-05-30"^^xsd:date;
+  essim:dateModified "2015-02-24"^^xsd:date;
+  essim:description "Oficial name of a person"@en;
+  essim:format "Alphabetic text"@en;
+  essim:identifier "surname";
+  essim:language iso639-1:es;
+  essim:mandate eurlex:32004R0883;
+  essim:references od:E101;
+  essim:relationWithTerms [a essim:Relation;
+                           essim:relationTerm got:IC004;
+                           essim:relationDescription "The Surname value has officially substituted the previous names of the person"@en];
+  essim:senderInstitution ir:6000;
+  essim:socialSecurityCategory ir:CSS21003.

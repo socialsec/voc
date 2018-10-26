@@ -1,4 +1,3 @@
-# Existed RDF vocabularies
 @prefix cvmap: <http://data.europa.eu/core-vocabularies/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -137,7 +136,7 @@ essim:relationTerm
   rdfs:domain essim:Relation ;
   rdfs:range got:Term .
 
-essim:relationDesription
+essim:relationDescription
   a rdf:Property ;
   rdfs:label "Relation Description"@en ;
   rdfs:domain essim:Relation ;

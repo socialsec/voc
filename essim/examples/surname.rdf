@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:essim="https://socialsec.github.io/voc/essim/#"
+         xmlns:cvmap="http://data.europa.eu/cv/">
+
+  <rdf:Description>
+    <rdf:type rdf:resource="https://socialsec.github.io/voc/essim/#Field"/>
+    <essim:creatorInstitution rdf:resource="https://socialsec.github.io/voc/ir/#2800"/>
+    <essim:dataSet>
+      <rdf:Description>
+        <rdf:type rdf:resource="http://data.europa.eu/cv/Mapping"/>
+        <cvmap:coreVocURI rdf:resource="https://joinup.ec.europa.eu/sites/default/files/distribution/2013-10/person-v1.00.rdf#familyName"/>
+        <cvmap:mappingRelation rdf:resource="http://data.europa.eu/cv/hasCloseMatch"/>
+      </rdf:Description>
+    </essim:dataSet>
+    <essim:dataTerm rdf:resource="https://socialsec.github.io/voc/got/#IC001"/>
+    <essim:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-30</essim:dateCreated>
+    <essim:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-24</essim:dateModified>
+    <essim:description xml:lang="en">Oficial name of a person</essim:description>
+    <essim:format xml:lang="en">Alphabetic text</essim:format>
+    <essim:identifier>surname</essim:identifier>
+    <essim:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+    <essim:mandate rdf:resource="https://socialsec.github.io/voc/eurlex/#32004R0883"/>
+    <essim:references rdf:resource="https://socialsec.github.io/voc/od/#E101"/>
+    <essim:relationWithTerms>
+      <essim:Relation>
+        <essim:relationTerm rdf:resource="https://socialsec.github.io/voc/got/#IC004"/>
+        <essim:relationDescription xml:lang="en">The Surname value has officially substituted the previous names of the person</essim:relationDescription>
+      </essim:Relation>
+    </essim:relationWithTerms>
+    <essim:senderInstitution rdf:resource="https://socialsec.github.io/voc/ir/#6000"/>
+    <essim:socialSecurityCategory rdf:resource="https://socialsec.github.io/voc/ir/#CSS21003"/>
+  </rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body prefix="cvmap: http://data.europa.eu/cv/
+essim: https://socialsec.github.io/voc/essim/#
+xsd: http://www.w3.org/2001/XMLSchema#"    >
+
+<h1>E106: CERTIFICATE OF ENTITLEMENT TO SICKNESS AND MATERNITY INSURANCE BENEFITS IN KIND FOR PERSONS RESIDING IN A COUNTRY OTHER THAN THE COMPETENT COUNTRY</h1>
+
+<form>
+
+  <div about="#surname" typeof="essim:Field">
+    <meta property="essim:creatorInstitution" resource="https://socialsec.github.io/voc/ir/#2800"/>
+    <div property="essim:dataSet" typeof="cvmap:Mapping">
+      <meta property="cvmap:coreVocURI" resource="https://joinup.ec.europa.eu/sites/default/files/distribution/2013-10/person-v1.00.rdf#familyName"/>
+      <meta property="cvmap:mappingRelation" resource="http://data.europa.eu/cv/hasCloseMatch"/>
+    </div> 
+    <meta property="essim:dataTerm" resource="https://socialsec.github.io/voc/got/#IC001"/>
+    <meta property="essim:dateCreated" content="2014-05-30" datatype="xsd:date"/>
+    <meta property="essim:dateModified" content="2015-02-24" datatype="xsd:date"/>
+    <meta property="essim:description" lang="en" content="Oficial name of a person" />
+    <meta property="essim:format" lang="en" content="Alphabetic text" />
+    <meta property="essim:identifier" content="surname" />
+    <meta property="essim:language" resource="http://id.loc.gov/vocabulary/iso639-1/es"/>
+    <meta property="essim:mandate" resource="https://socialsec.github.io/voc/eurlex/#32004R0883"/>
+    <meta property="essim:references" resource="https://socialsec.github.io/voc/od/#E101"/>
+    <div property="essim:relationWithTerms" typeof="essim:Relation">
+        <meta property="essim:relationTerm" resource="https://socialsec.github.io/voc/got/#IC004"/>
+        <meta property="essim:relationDescription" lang="en" content="The Surname value has officially substituted the previous names of the person"/>
+    </div> 
+    <meta property="essim:senderInstitution" resource="https://socialsec.github.io/voc/ir/#6000"/>
+    <meta property="essim:socialSecurityCategory" resource="https://socialsec.github.io/voc/ir/#CSS21003"/>
+
+    <label for="surname">2.1 Surname(s):</label>
+    <input type="text" id="surname" value="Martínez">
+ </div>
+</form> 
+
+</body>
+</html>

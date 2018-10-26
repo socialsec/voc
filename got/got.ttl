@@ -29,6 +29,15 @@ got:termName
 
 # Resources (Individuals, Instances)
 
+got:IC001
+  a got:Term ;
+  got:termCode "IC001" ;
+  got:termName "Surname"@en .
+
+got:IC004
+  a got:Term ;
+  got:termCode "IC004" ;
+  got:termName "Previous names"@en .
 
 got:IC007
   a got:Term ;
@@ -39,4 +48,9 @@ got:IC007_SP
   a got:Term ;
   got:termCode "IC007_SP" ;
   got:termName "Lugar de nacimiento"@es .
+
+got:IC009
+  a got:Term ;
+  got:termCode "IC009" ;
+  got:termName "Nationality"@en .
 

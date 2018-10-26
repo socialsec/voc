@@ -44,6 +44,18 @@ od:template
   rdfs:range rdfs:Resource . 
 
 # Resources
+
+od:E101
+  a od:Form ;
+  od:id "E101" ;
+  od:title "E101 Certificate concerning the legislation aplicable"@es ;
+  od:template <http://od.org/templates/E101.docx> .
+
+od:E106
+  a od:Form ;
+  od:id "E106" ;
+  od:title "E106 certificate of entitlement to sickness and maternity insurance benefits in kind for persons residing in a country other than the competent country"@es ;
+  od:template <http://od.org/templates/E106.docx> .
   
 od:P5000
   a od:P-Form ;
@@ -52,8 +64,7 @@ od:P5000
   od:template <http://od.org/templates/P5000.docx> .
 
 od:P9000
-  a od:Form ;
-  od:id "p9000" ;
+  a od:P-Form ;
+  od:id "P9000" ;
   od:title "P9000 Reply to request for additional information"@es ;
   od:template <http://od.org/templates/P9000.docx> .
-
