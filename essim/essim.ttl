@@ -21,7 +21,7 @@
 essim:Field
   a rdfs:Class ;
   rdfs:label "Data field"@en ;   
-  rdfs:comment "Data field in a Social Security form"@en .
+  rdfs:comment "Data field in a social security form"@en .
 
 essim:Relation
   a rdfs:Class ;
@@ -36,6 +36,7 @@ essim:creatorInstitution
   rdfs:label "Creator Institution"@en ;
   rdfs:domain essim:Field ;
   rdfs:range ir:Institution ;
+  rdfs:comment "Social security institution primarily responsible for making the data"@en ;
   rdfs:subPropertyOf dc:creator .
 
 essim:dataSet
