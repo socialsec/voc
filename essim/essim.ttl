@@ -13,7 +13,7 @@
 @prefix od: <https://socialsec.github.io/voc/od/#> .
 
 #*************************************
-#**********ESSM VOCABULARY************
+#**********ESSIM VOCABULARY************
 #*************************************
 
 # Classes
@@ -44,6 +44,7 @@ essim:dataSet
   rdfs:label "Data Set"@en ;
   rdfs:domain essim:Field ;
   rdfs:range cvmap:Mapping ;
+  rdfs:comment "Core Vocabulary where a similar data concept could be found"  
   rdfs:subPropertyOf dc:subject .
   
 essim:dataTerm
@@ -51,6 +52,7 @@ essim:dataTerm
   rdfs:label "Data Term"@en ;
   rdfs:domain essim:Field ;
   rdfs:range got:Term ;
+  rdfs:comment "Term included in the Glossary of Terms (GOT) that defines the meaning of the data field"  
   rdfs:subPropertyOf dc:date .
 
 essim:dateCreated
