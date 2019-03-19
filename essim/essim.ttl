@@ -60,12 +60,14 @@ essim:dateCreated
   rdfs:label "Date Created"@en ;
   rdfs:domain essim:Field ;
   rdfs:range rdfs:Literal ;
+  rdfs:comment "A point of time associated with the starting point in the lifecycle of data"
   rdfs:subPropertyOf dc:date .
 
 essim:dateModified
   a rdf:Property ;
   rdfs:label "Date Modified"@en ;
   rdfs:domain essim:Field ;
+  rdfs:comment "Date when data was last modified or changed"
   rdfs:range rdfs:Literal ;
   rdfs:subPropertyOf dc:date .
   
