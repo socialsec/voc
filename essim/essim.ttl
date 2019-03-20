@@ -75,6 +75,7 @@ essim:description
   a rdf:Property ;
   rdfs:label "Description"@en ;
   rdfs:domain essim:Field ;
+  rdfs:comment "An effective description is 25-30 words long or approximately 150 characters."
   rdfs:range rdfs:Literal ;
   rdfs:subPropertyOf dc:description .
 
@@ -82,6 +83,7 @@ essim:format
   a rdf:Property ;
   rdfs:label "Format"@en ;
   rdfs:domain essim:Field ;
+  rdfs:comment "Format of the data"
   rdfs:range rdfs:Literal ;
   rdfs:subPropertyOf dc:format .
 
